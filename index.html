@@ -4,30 +4,121 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sayori's Notebook</title>
-
-    <link rel="stylesheet" href="./style.css" />
-
-    <h1>hello!</h1>
-    <br>
   </head>
   <body>
-    <div>
-      <p>This is where you will see Sayori's Notebook things!</p>
+    
+    <h1 class="title">Sayori's Notebook</h1>
+    <br>
+    <br>
+
+    <div id="rando1" class="cooltext">
+      <a href="https://gamebanana.com/mods/381373" class="downloadtext">download</a>
+    </div>
+
+    <div id="rando3" class="cooltext">
+      <a href="#" class="writetext">write your own page.</a>
     </div>
     <br>
-    <div>
-      <img src="images\snbyori.gif">
+    <div class="center">
+      <img src="images\snbyori.gif"> <!-- Change for GIF in Middle -->
     </div>
+    <br>
+    <div class="center">
+      <audio controls>
+        <source src="sounds/notebook5.mp3" type="audio/mpeg"> <!-- Change for Sound File -->
+      </audio>
+    </div>
+    <br>
+    
+    <div id="rando2" class="cooltext">
+      <a href="bonus.html" class="bonustext">bonus</a>
+    </div>
+
+    <footer class="footertext">
+      <p>images subject to change. check back occasionally!!</p>
+    </footer>
   </body>
-  <footer>
-    <p>hello. goodby e.</p>
-  </footer>
 </html>
 
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap');
+   body {
+    background-image: url("images/background.png"); /* Change for Background Image */
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .title {
+    font-size: 100px;
+    text-align: center;
+    font-family: "Abyssinica SIL", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
 
+  .cooltext {
+    font-size: 50px;
+    font-family: "Abyssinica SIL", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
 
+  .downloadtext {
+    color: black;
+    text-decoration: none;
+  }
 
+  .bonustext {
+    color: black;
+    text-decoration: none;
+  }
 
+  .writetext {
+    color: black;
+    text-decoration: none;
+  }
 
+  .footertext {
+    text-align: right;
+    position: fixed;
+    justify-content: right;
+    align-items: end;
+    bottom: 0;
+    right: 0;
+    font-size: 30px;
+    font-family: "Abyssinica SIL", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+</style>
 
+<script>
+  function moveRandomDownload(elm) {
+    elm.style.position = "absolute";
+    elm.style.top = Math.floor(Math.random() * 30 + 20) + "%";
+    elm.style.left = Math.floor(Math.random() * 20 + 5) + "%";
+  }
+  
+  
+  function moveRandomWrite(elm) {
+    elm.style.position = "absolute";
+    elm.style.top = Math.floor(Math.random() * 20 + 40) + "%";
+    elm.style.left = Math.floor(Math.random() * 10 + 5) + "%";
+  }
+
+  function moveRandomBonus(elm) {
+    elm.style.position = "absolute";
+    elm.style.top = Math.floor(Math.random() * 40 + 20) + "%";
+    elm.style.left = Math.floor(Math.random() * 30 + 60) + "%";
+  }
+
+  moveRandomDownload(document.querySelector("#rando1"));
+  moveRandomBonus(document.querySelector("#rando2"))
+  moveRandomWrite(document.querySelector("#rando3"))
+
+</script>
